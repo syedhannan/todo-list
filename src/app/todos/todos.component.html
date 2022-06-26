@@ -1,0 +1,14 @@
+<h2 class="d-flex justify-content-center">Add Todo Items</h2>
+<app-add-todo (todoAdd)="addTodo($event)"></app-add-todo>
+
+<br/>
+<h2  *ngIf="todos.length" class="d-flex justify-content-center">List of Items</h2>
+<div *ngFor="let todo of todos; index as i">
+  <app-todo-item
+    [todo]="todo"
+    [i]="i"
+    (todoDelete)="deleteTodo($event)"
+
+    (todoToggle)="toggleTodo($event)"
+  ></app-todo-item>
+</div>

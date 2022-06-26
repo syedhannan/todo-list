@@ -1,0 +1,17 @@
+
+<form (ngSubmit)="onSubmit()">
+    <div class="mb-3">
+      <label for="todoTitle" class="form-label">Todo Title</label>
+      <input type="text" class="form-control" name="title" [(ngModel)]="title">
+    </div>
+    <div class="mb-3">
+        <label for="todoDesc" class="form-label">Todo Description</label>
+        <input type="text" class="form-control" name="desc"  [(ngModel)]="desc">
+      </div>
+  
+
+    <button type="button" (click)="clearData()" id="clearButton" class="btn btn-sm btn-secondary">Clear</button>
+    &nbsp;
+    <button  type="submit" id="submitButton"  class="btn btn-sm btn-primary">Submit</button>
+
+  </form>
